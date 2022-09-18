@@ -17,7 +17,7 @@ public class MyMqtt_Pub_Client {
     public MyMqtt_Pub_Client() {
         try {
             // broker와 mqtt 통신을 하며 메시지를 전송할 클라이언트 객체를 만들고 접속
-            this.client = new MqttClient("tcp://192.168.60.137:1883", "myid");
+            this.client = new MqttClient("tcp://아이피 주소:1883", "myid");
             client.connect();   // broker 접속
         } catch (MqttException e) {
             e.printStackTrace();

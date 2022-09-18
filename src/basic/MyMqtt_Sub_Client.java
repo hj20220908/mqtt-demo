@@ -7,7 +7,7 @@ import org.eclipse.paho.client.mqttv3.*;
  * 1. MqttCallback 인터페이스 상속
  * 2. MqttCallback 인터페이스의 abstact 메서드를 오버라이딩 해야 함
  */
-public class MyMqtt_sub_Client implements MqttCallback {
+public class MyMqtt_Sub_Client implements MqttCallback {
 
     // broker와 통신하는 역할을 담당
     // MQTT 통신에서 Publisher와 Subscriber의 역할을 하기 위한 기능을 가지고 있는 객체
@@ -17,7 +17,7 @@ public class MyMqtt_sub_Client implements MqttCallback {
     private MqttConnectOptions mqttOptiom;
 
     // clientId는 broker가 클라이언트를 식별하기 위한 문자열 - 아이디는 고유성을 가짐
-    public MyMqtt_sub_Client init(String server, String clientId) {
+    public MyMqtt_Sub_Client init(String server, String clientId) {
         try {
 
             mqttOptiom = new MqttConnectOptions();
@@ -89,8 +89,8 @@ public class MyMqtt_sub_Client implements MqttCallback {
     }
 
     public static void main(String[] args) {
-        MyMqtt_sub_Client subObj = new MyMqtt_sub_Client();
-        subObj.init("tcp://192.168.60.137:1883", "myid2").subscribe("iot");
+        MyMqtt_Sub_Client subObj = new MyMqtt_Sub_Client();
+        subObj.init("tcp://아이피 주소:1883", "myid2").subscribe("iot");
     }
 
 }
